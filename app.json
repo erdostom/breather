@@ -4,8 +4,7 @@
     "slug": "breather",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,7 +21,14 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.digitalforest.breather",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.digitalforest.breather",
+      "versionCode": 1
     }
+    "description": ""
   }
 }
