@@ -27,8 +27,11 @@
     },
     "android": {
       "package": "com.digitalforest.breather",
-      "versionCode": 1
-    }
-    "description": ""
+      "versionCode": 1,
+      "permissions": [
+        "VIBRATE"
+      ]
+    },
+    "description": "Relieve stress"
   }
 }

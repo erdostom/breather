@@ -58,11 +58,11 @@ function Row(props) {
   return <View style={styles.row}>
     <Text style={styles.heading}>Counts <Text style={styles.bold}>{props.label}</Text></Text>
     <Text style={styles.number}>{padN(props.n)}</Text>
-    <TouchableHighlight style={styles.rowButton} onPress={incrementN}>
-      <Text style={styles.rowButtonText}>+</Text>
-    </TouchableHighlight>
     <TouchableHighlight style={styles.rowButton} onPress={decrementN}>
       <Text style={styles.rowButtonText}>-</Text>
+    </TouchableHighlight>
+    <TouchableHighlight style={styles.rowButton} onPress={incrementN}>
+      <Text style={styles.rowButtonText}>+</Text>
     </TouchableHighlight>
   </View>
 }

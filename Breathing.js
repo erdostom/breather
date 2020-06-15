@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, StatusBar, TouchableHighlight, Vibration } from
 import useInterval from './useInterval'
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
+import * as Haptics from 'expo-haptics'
+
 export default function(props) {
 
   const [stepText, setStepText] = useState('Breathe In')
@@ -15,7 +17,8 @@ export default function(props) {
   }, 100)
 
   useEffect(() => {
-    Vibration.vibrate(500)
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
+    // Vibration.vibrate(500)
   }, [stepText])
 
   const totalTime = (props.holdCount + props.inCount + props.outCount + props.waitCount) * 1000
